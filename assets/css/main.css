@@ -1,0 +1,113 @@
+@font-face {
+  font-family: Nexa-Bold;
+  src: url("./../fonts/Nexa Bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: Nexa-Light;
+  src: url("./../fonts/Nexa Light.otf") format("opentype"); }
+
+* {
+  font-family: Nexa-Bold !important; }
+
+.wrraper {
+  width: 980px;
+  margin: 0 auto; }
+
+header {
+  background: #1ABC9C;
+  text-align: center;
+  color: #ECF0F1;
+  padding: 15px 0; }
+  header h1, header xmp {
+    margin: 0; }
+  header xmp {
+    padding: 20px 0;
+    font-size: 60px; }
+  header h1 {
+    font-size: 60px; }
+
+.about {
+  overflow: auto;
+  padding: 15px 0;
+  box-sizing: border-box;
+  background: #fafafa;
+  width: 100%; }
+  .about .wrapper {
+    width: 880px;
+    margin: 40px auto; }
+  .about .picture {
+    width: 230px;
+    text-align: center;
+    float: left;
+    padding: 20px 40px; }
+    .about .picture .tags {
+      width: 100%;
+      margin: 15px 0; }
+    .about .picture p {
+      line-height: 16px;
+      padding: 0; }
+    .about .picture img {
+      width: 150px;
+      border-radius: 100%; }
+  .about .description {
+    width: 100%;
+    padding: 15px;
+    font-size: 17px;
+    margin-left: -230px;
+    padding-left: 230px;
+    box-sizing: border-box;
+    float: left; }
+    .about .description p {
+      font-family: Nexa-Light !important; }
+
+.timeline {
+  width: 700px;
+  margin: 0 auto;
+  position: relative; }
+  .timeline .period, .timeline .title, .timeline .description p {
+    font-family: Nexa-Light !important;
+    font-size: 15px;
+    line-height: 26px; }
+  .timeline .title, .timeline .period {
+    font-size: 18px; }
+  .timeline .title {
+    margin-bottom: 5px; }
+  .timeline .line {
+    width: 2px;
+    position: absolute;
+    left: 30%;
+    top: 0;
+    bottom: 0;
+    background: #fafafa; }
+  .timeline h2 {
+    text-align: center;
+    margin: 25px 0 35px 0;
+    width: 100%;
+    color: #1ABC9C;
+    font-family: Nexa-Light !important; }
+  .timeline .timeline-row {
+    display: inline-block; }
+    .timeline .timeline-row .event {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 25px; }
+      .timeline .timeline-row .event .left {
+        width: 30%;
+        float: left;
+        text-align: left;
+        text-align: center;
+        position: relative; }
+        .timeline .timeline-row .event .left .circle {
+          width: 15px;
+          height: 15px;
+          border-radius: 100%;
+          position: absolute;
+          top: 0;
+          right: -7.5px;
+          background-color: #1ABC9C;
+          border: 1px solid #fafafa; }
+      .timeline .timeline-row .event .right {
+        width: 70%;
+        float: left;
+        box-sizing: border-box;
+        padding-left: 50px; }

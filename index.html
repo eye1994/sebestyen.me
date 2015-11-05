@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Roland Sebestyen</title>
+   <!-- bower:css -->
+   <!-- endbower -->
+   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header>
+    <div class="wrraper">
+      <h1><xmp></></xmp></h1>
+      <h1>Roland</h1>
+      <h3>Coffee lover, developer<span class="blink"> _</span></h3>
+    </div>
+  </header>
+  <div class="about">
+    <div class="wrapper">
+      <div class="picture">
+        <img src="me.jpg" alt="Roland Sebestyen">
+        <div class="tags">
+          <p>#FrontEnd-DEV</p>
+          <p>#RubyOnRails-DEV</p>
+          <p>#NodeJS-DEV</p>
+        </div>
+      </div>
+      <div class="description">
+        <p>My name is Roland Sebestyen, I am passionate about WebDevelopment and I like to try new things, especially  cutting edge technologies. In the WebDevelopment field I have experience with the following programming languages: JavaScript, NodeJS, Ruby on Rails, and I like the idea of working as a Full-Stack developer. I am a fast pace learner and I don’t like to limit myself by a language or framework but rather to try and find the best solution that fits in that situation. I never give up until
+  I figure things out, I love challenges. Keeping myself updated on every news from web development is an important part of my everyday. I am also currently studying Computer Engineering at Politehnica University of Timisoara.</p>
+      </div>
+    </div>
+  </div>
+  <div class="timeline">
+    <h2>Experience</h2>
+    <div class="line"></div>
+    <div class="timeline-row">
+      <div class="event">
+        <div class="left">
+          <div class="circle"></div>
+          <div class="period">
+            2015 - present
+          </div>
+          <div class="tag">
+            #FrontEnd-DEV
+          </div>
+        </div>
+        <div class="right">
+          <div class="title">DigitalEducation</div>
+          <div class="description">
+            <p>Working as a Web Developer in an SinglePage AngularJS + Rails project with the main focus on the Front-End part but also doing some Back-End from time to time.</p>
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="left">
+          <div class="circle"></div>
+          <div class="period">
+            2013 - 2014
+          </div>
+          <div class="tag">
+            #Volunteer
+          </div>
+        </div>
+        <div class="right">
+          <div class="title">BEST Timisoara</div>
+          <div class="description">
+            <p>Helping in the Marketing Department by creating the web pages for the events and logo, covers and foldings designs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="left">
+          <div class="circle"></div>
+          <div class="period">
+            2014
+          </div>
+          <div class="tag">
+            #Volunteer
+          </div>
+        </div>
+        <div class="right">
+          <div class="title">CoderDojo Timisoara</div>
+          <div class="description">
+            <p>Helped kids to understand basic concepts of algorithms.</p>
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="left">
+          <div class="circle"></div>
+          <div class="period">
+            2014 - present
+          </div>
+          <div class="tag">
+            #ComputerScience
+          </div>
+        </div>
+        <div class="right">
+          <div class="title">Politehnica University of Timisoara</div>
+          <div class="description">
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="left">
+          <div class="circle"></div>
+          <div class="period">
+            2013 - 2014
+          </div>
+          <div class="tag">
+            #WebDesign
+          </div>
+        </div>
+        <div class="right">
+          <div class="title">LinkeAcademy</div>
+          <div class="description">
+            <p>One year program acquiring the competence of a Certified Web Designer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbower -->
+  <script>
+    $( document ).ready(function() {
+       function blink() {
+          setTimeout(function() {
+            var visibility = $('.blink').css('visibility');
+            if (visibility == 'hidden') $('.blink').css('visibility', 'visible');
+            else $('.blink').css('visibility', 'hidden');
+            blink();
+         }, 500);
+       }
+       blink();
+    });
+  </script>
+</body>
+</html>

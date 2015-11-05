@@ -1,0 +1,116 @@
+$green: #1ABC9C
+$wite: #ECF0F1
+
+@font-face 
+  font-family: Nexa-Bold
+  src: url("./../fonts/Nexa Bold.otf") format("opentype")
+
+@font-face 
+  font-family: Nexa-Light
+  src: url("./../fonts/Nexa Light.otf") format("opentype")
+
+* 
+  font-family: Nexa-Bold!important
+
+.wrraper
+    width: 980px 
+    margin: 0 auto
+
+header 
+  background: $green
+  text-align: center
+  color: $wite
+  padding: 15px 0
+  h1, xmp
+    margin: 0
+  xmp
+    padding: 20px 0
+    font-size: 60px
+  h1 
+    font-size: 60px  
+
+.about 
+  overflow: auto
+  padding: 15px 0
+  box-sizing: border-box
+  background: #fafafa
+  width: 100%
+  .wrapper
+    width: 880px
+    margin: 40px auto
+  .picture
+    width: 230px
+    text-align: center
+    float: left
+    padding: 20px 40px
+    .tags
+      width: 100%
+      margin: 15px 0
+    p 
+      line-height: 16px
+      padding: 0
+    img 
+      width: 150px
+      border-radius: 100%
+  .description
+    width: 100%
+    padding: 15px
+    font-size: 17px
+    margin-left: -230px
+    padding-left: 230px
+    box-sizing: border-box
+    float: left
+    p
+      font-family: Nexa-Light!important
+
+.timeline
+  width: 700px
+  margin: 0 auto
+  position: relative
+  .period, .title, .description p 
+    font-family: Nexa-Light!important
+    font-size: 15px
+    line-height: 26px
+  .title, .period
+    font-size: 18px
+  .title
+    margin-bottom: 5px
+  .line 
+    width: 2px
+    position: absolute
+    left: 30%
+    top: 0
+    bottom: 0
+    background: #fafafa
+  h2
+    text-align: center
+    margin: 25px 0 35px 0
+    width: 100%
+    color: $green
+    font-family: Nexa-Light!important
+  .timeline-row
+    display: inline-block
+    .event
+      width: 100%
+      display: inline-block
+      margin-bottom: 25px
+      .left 
+        width: 30%
+        float: left
+        text-align: left
+        text-align: center
+        position: relative
+        .circle
+          width: 15px
+          height: 15px
+          border-radius: 100%
+          position: absolute
+          top: 0
+          right: -7.5px
+          background-color: $green
+          border: 1px solid #fafafa
+      .right
+        width: 70%
+        float: left
+        box-sizing: border-box
+        padding-left: 50px
