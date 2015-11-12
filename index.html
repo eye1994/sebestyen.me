@@ -9,13 +9,14 @@
    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-  <header>
+  <header class="large">
     <div class="wrraper">
       <h1><xmp></></xmp></h1>
       <h1>Roland</h1>
       <h3>Coffee lover, developer<span class="blink"> _</span></h3>
     </div>
   </header>
+  <header class="header--scroll"></header>
   <div class="about">
     <div class="wrapper">
       <div class="picture">
@@ -123,6 +124,31 @@
       </div>
     </div>
   </div>
+  <div class="skills">
+    <div class="wrapper">
+      <h2>Skills</h2>
+      <div class="tags-wrapper">
+        <div class="tags">
+          <p>#NodeJS</p><p>#AnjularJS</p><p>#JasmineJS</p><p>#GruntJS</p><p>#Git</p><p>#CSS</p>
+        </div>
+      </div>
+      <div class="tags-wrapper">
+        <div class="tags">
+          <p>#TypeScript</p><p>#JavaScript</p><p>#ES6</p><p>#Sass</p><p>#HTML</p>
+        </div>
+      </div>
+      <div class="tags-wrapper">
+        <div class="tags">
+          <p>#Ruby</p><p>#RubyOnRails</p><p>#SQL</p><p>#MongoDB</p>
+        </div>
+      </div>
+      <div class="tags-wrapper">
+        <div class="tags">
+          <p>#ExpressJS</p><p>#AgileEnviorment</p>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
@@ -138,6 +164,43 @@
          }, 500);
        }
        blink();
+       var header = $('header').first().height();
+
+       $( window ).scroll(function() {
+         if ($(window).scrollTop() > header) {
+            $('header').first().hide();
+            $('header').last().show();
+         } else {
+            $('header').last().hide();
+            $('header').first().show();
+         }
+       });
+
+       var text = ["R", "O", "L", "A", "N", "D"];
+       var index = 0;
+       var max = 6;
+
+       function animateHeader() {
+          setTimeout(function() {
+            var final = "";
+            for (var i = 0; i < max; i++) {
+
+              if (i == index) {
+                final = final + "<" + text[index] + "/>"
+              } else {
+                final += text[i];
+              } 
+            }
+
+            $('header').last().text(final);
+
+            if (index == 5) index = 0;
+            else index++;
+            animateHeader();
+          }, 500);
+       }
+       animateHeader();
+
     });
   </script>
 </body>

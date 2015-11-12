@@ -13,18 +13,34 @@
   width: 980px;
   margin: 0 auto; }
 
-header {
+header.large {
   background: #1ABC9C;
   text-align: center;
   color: #ECF0F1;
   padding: 15px 0; }
-  header h1, header xmp {
+  header.large h1, header.large xmp {
     margin: 0; }
-  header xmp {
+  header.large xmp {
     padding: 20px 0;
     font-size: 60px; }
-  header h1 {
+  header.large h1 {
     font-size: 60px; }
+
+.header--scroll {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  line-height: 50px;
+  widht: 100%;
+  z-index: 999;
+  background-color: #1ABC9C;
+  font-size: 26px;
+  padding: 0;
+  text-align: center;
+  color: #ECF0F1; }
 
 .about {
   overflow: auto;
@@ -111,3 +127,29 @@ header {
         float: left;
         box-sizing: border-box;
         padding-left: 50px; }
+
+.skills {
+  background-color: #fafafa; }
+  .skills .wrapper {
+    width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: center; }
+  .skills h2 {
+    text-align: center;
+    margin: 25px 0 35px 0;
+    width: 100%;
+    color: #1ABC9C;
+    font-family: Nexa-Light !important; }
+  .skills .tags-wrapper {
+    width: 100%; }
+    .skills .tags-wrapper .tags {
+      font-size: 20px;
+      line-height: 36px;
+      margin: 0 auto;
+      display: inline-block; }
+      .skills .tags-wrapper .tags p {
+        float: left;
+        margin: 0 10px;
+        font-family: Nexa-Light !important; }
