@@ -13,7 +13,8 @@ $wite: #ECF0F1
   font-family: Nexa-Bold!important
 
 .wrraper
-    width: 980px 
+    width: 100%
+    max-width: 980px 
     margin: 0 auto
 
 header.large
@@ -37,7 +38,7 @@ header.large
   right: 0
   height: 50px
   line-height: 50px
-  widht: 100%
+  width: 100%
   z-index: 999
   background-color: $green
   font-size: 26px
@@ -52,7 +53,8 @@ header.large
   background: #fafafa
   width: 100%
   .wrapper
-    width: 880px
+    width: 100%
+    max-width: 880px
     margin: 40px auto
   .picture
     width: 230px
@@ -80,7 +82,8 @@ header.large
       font-family: Nexa-Light!important
 
 .timeline
-  width: 700px
+  width: 100%
+  max-width: 700px
   margin: 0 auto
   position: relative
   .period, .title, .description p 
@@ -113,7 +116,6 @@ header.large
       .left 
         width: 30%
         float: left
-        text-align: left
         text-align: center
         position: relative
         .circle
@@ -134,7 +136,8 @@ header.large
 .skills 
   background-color: #fafafa
   .wrapper
-    width: 800px
+    width: 100%
+    max-width: 600px
     margin: 0 auto
     padding: 25px
     box-sizing: border-box
@@ -149,10 +152,38 @@ header.large
     width: 100%
     .tags 
       font-size: 20px
-      line-height: 36px
+      line-height: 46px
       margin: 0 auto
       display: inline-block
-      p 
-        float: left
-        margin: 0 10px
-        font-family: Nexa-Light!important
+      font-family: Nexa-Light!important
+      word-spacing: 10px
+
+@media only screen and (max-width: 768px)
+  header.large 
+    display: none!important
+  header.header--scroll
+    display: block!important
+  .about 
+    .picture
+      float: none
+      margin: 0 auto
+    .description
+      margin: 0
+      padding: 15px
+  .timeline 
+    .line 
+      left: 16.5px
+    .timeline-row
+      .left 
+        width: 100%!important
+        float: none!important
+        padding-left: 50px!important
+        text-align: left!important
+        .circle
+          top: 5px!important
+          left: 10px
+      .right
+        width: 100%!important
+        float: none!important
+        padding-left: 50px!important
+
