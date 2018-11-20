@@ -5,8 +5,9 @@
   <title>Roland Sebestyen</title>
    <!-- bower:css -->
    <!-- endbower -->
-   <link rel="canonical" href="http://roland.tech">
-   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+   <link rel="canonical" href="http://eye1994.github.io">
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
    <link rel="stylesheet" href="assets/css/main.css">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -152,27 +153,10 @@
           #ReasonML #Elm #AgileEnvironment #AngularJS
         </div>
       </div>
-      <!-- <div class="tags-wrapper">
-        <div class="tags">
-          <p>#TypeScript</p><p>#JavaScript</p><p>#ES6</p><p>#Sass</p><p>#HTML</p>
-        </div>
-      </div>
-      <div class="tags-wrapper">
-        <div class="tags">
-          <p>#Ruby</p><p>#RubyOnRails</p><p>#SQL</p><p>#GO</p><p>#MongoDB</p>
-        </div>
-      </div>
-      <div class="tags-wrapper">
-        <div class="tags">
-          <p>#ExpressJS</p><p>#AgileEnvironment</p>
-        </div>
-      </div> -->
     </div>
   </div>
-  <!-- bower:js -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <!-- endbower -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
     $( document ).ready(function() {
        function blink() {
@@ -188,11 +172,9 @@
 
        $( window ).scroll(function() {
          if ($(window).scrollTop() > header) {
-            // $('header').first().hide();
             $('header').last().show();
          } else {
             $('header').last().hide();
-            // $('header').first().show();
          }
        });
 
