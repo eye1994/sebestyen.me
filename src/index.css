@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;600;800&display=swap");
+
+:root {
+  font-family: "Noto Sans", system-ui, Arial, sans-serif;
+  font-weight: 800;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* Color  */
+  /* --primary: #1abc9c;
+  --primaryLight: #5d9d8b; */
+  --primary: #5d9d8b;
+  --primaryLight: #1abc9c;
+  --secondary: #4632a2;
+  /* --primaryText: #333333;
+  --lightGray: #fafafa;
+  --secondaryText: #ecf0f1; */
+
+  --primaryText: #333333;
+  --lightGray: #effcf8;
+  --secondaryText: #ecf0f1;
+
+  /* Layout */
+  --containerWidth: 760px;
+  --mobileBreakPoint: 760px;
+
+  /* Option 1 */
+  --sectionBackground: var(--lightGray);
+  --progressBackground: #cfe3dd;
+  --progressBarFillColor: var(--primary);
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
