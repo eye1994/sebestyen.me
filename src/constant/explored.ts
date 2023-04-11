@@ -2,6 +2,15 @@ import { TechnologyExploredProps } from "../components/technologies-explored/Tec
 
 export const technologiesExplored: TechnologyExploredProps[] = [
   {
+    name: "NodeJS",
+    projects: [
+      {
+        description: "HTTP Server Library",
+        codebase: "https://github.com/eye1994/shp-server"
+      }
+    ]
+  },
+  {
     name: "GoLang",
     projects: [
       {
@@ -13,5 +22,5 @@ export const technologiesExplored: TechnologyExploredProps[] = [
         codebase: "https://github.com/eye1994/game-server",
       },
     ],
-  },
+  }
 ];
