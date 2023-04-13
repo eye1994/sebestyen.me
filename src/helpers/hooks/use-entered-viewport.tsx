@@ -6,37 +6,37 @@ export const useEnteredViewPort = (elementRef: RefObject<HTMLElement>) => {
   const scrollY = useRef<number>(0);
   const [isVisible, setIsVisible] = useState(false);
 
-  const updateTopElementPosition = () => {
+  const updateTopElementPosition = useCallback(() => {
     top.current =
       elementRef!.current!.getBoundingClientRect().top + window.scrollY;
-  };
+  }, [elementRef]);
 
-  const setElementVisibility = () => {
+  const setElementVisibility = useCallback(() => {
     const viewportHeight =
       window.innerHeight || document.documentElement.clientHeight;
     if (scrollY.current + viewportHeight >= top.current && !isVisible) {
       setIsVisible(true);
     }
-  };
+  }, [isVisible]);
 
   const onScroll = useCallback(() => {
     scrollY.current = window.scrollY;
     setElementVisibility();
-  }, []);
+  }, [setElementVisibility]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const onResize = useCallback(
     useDebouncedCallback(() => {
-      console.log("resized");
       scrollY.current = window.scrollY;
       updateTopElementPosition();
       setElementVisibility();
     }, 100),
-    []
+    [updateTopElementPosition, setElementVisibility]
   );
 
   useEffect(() => {
     updateTopElementPosition();
-  }, []);
+  }, [updateTopElementPosition]);
 
   useEffect(() => {
     window.addEventListener("resize", onResize, { passive: true });
@@ -59,7 +59,7 @@ export const useEnteredViewPort = (elementRef: RefObject<HTMLElement>) => {
       document.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
     }
-  }, [isVisible]);
+  }, [isVisible, onResize, onScroll]);
 
   return isVisible;
 };

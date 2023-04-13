@@ -11,7 +11,7 @@ export const useDebouncedCallback = (callback: Function, wait: number) => {
       };
 
       clearTimeout(timeout.current);
-      timeout.current = setTimeout(later, wait);
+      timeout.current = +setTimeout(later, wait);
     },
     [callback, wait]
   );

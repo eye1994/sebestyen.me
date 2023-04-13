@@ -1,62 +1,31 @@
 import { useRef } from "react";
-import styled, { css } from "styled-components";
-import { breakpoints } from "../constant/breakpoints";
 import { useElementLeftViewport } from "../helpers/hooks/use-element-left-viewport";
-import { Blink } from "../helpers/animation/Blink";
 import { CodeAnimation } from "../helpers/animation/Code";
-import { H1 } from "./typography/h1";
-import { H3 } from "./typography/h3";
-
-const HeaderContainer = styled.header`
-  background-color: var(--primary);
-  color: var(--secondaryText);
-  text-align: center;
-  width: 100%;
-  padding: 16px;
-
-  @media (max-width: ${breakpoints.mobile}) {
-    display: none;
-  }
-`;
-
-const SitckyHeader = styled.header<{ isVisible: boolean }>`
-  position: fixed;
-  top: -50px;
-  left: 0;
-  height: 50px;
-  background: var(--primary);
-  width: 100vw;
-  line-height: 50px;
-  color: var(--secondaryText);
-  text-align: center;
-  z-index: 3;
-  transition: top 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
-
-  ${({ isVisible }) =>
-    isVisible &&
-    css`
-      top: 0;
-    `}
-`;
+import clsx from "clsx";
 
 export const Header = () => {
   const headerRef = useRef<HTMLElement>(null);
   const headerIsOutsideTheViewPort = useElementLeftViewport(headerRef);
 
+  const stickyHeaderClassNames = clsx([
+    "sticky-header",
+    headerIsOutsideTheViewPort && "visible",
+  ]);
+
   return (
     <>
-      <SitckyHeader isVisible={headerIsOutsideTheViewPort}>
-        <H3>
+      <div className={stickyHeaderClassNames}>
+        <h3>
           <CodeAnimation text="Roland"></CodeAnimation>
-        </H3>
-      </SitckyHeader>
-      <HeaderContainer ref={headerRef}>
-        <H1>{"</>"}</H1>
-        <H1>Roland</H1>
-        <H3>
-          Coffe lover, developer <Blink>_</Blink>
-        </H3>
-      </HeaderContainer>
+        </h3>
+      </div>
+      <div className="header-container" ref={headerRef}>
+        <h1>{"</>"}</h1>
+        <h1>Roland</h1>
+        <h3>
+          Coffee lover, developer <span className="blink">_</span>
+        </h3>
+      </div>
     </>
   );
 };

@@ -6,9 +6,9 @@ export const technologiesExplored: TechnologyExploredProps[] = [
     projects: [
       {
         description: "HTTP Server Library",
-        codebase: "https://github.com/eye1994/shp-server"
-      }
-    ]
+        codebase: "https://github.com/eye1994/shp-server",
+      },
+    ],
   },
   {
     name: "GoLang",
@@ -22,5 +22,5 @@ export const technologiesExplored: TechnologyExploredProps[] = [
         codebase: "https://github.com/eye1994/game-server",
       },
     ],
-  }
+  },
 ];

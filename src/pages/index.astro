@@ -1,0 +1,22 @@
+---
+import { Header } from "../components/Header";
+import { About } from "../components/About";
+import { Competences } from "../components/competences/Competences";
+import { Timeline } from "../components/timeline/Timeline";
+import { TechnologiesExplored } from "../components/technologies-explored/TechnologiesExplored";
+import { Hobbies } from "../components/Hobbies";
+import { Contact } from "../components/Contact";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Roland SEBESTYEN">
+  <div className="content-wrapper">
+    <Header client:load />
+    <About />
+    <Timeline />
+    <Competences client:load />
+    <TechnologiesExplored />
+    <Hobbies />
+    <Contact />
+  </div>
+</Layout>

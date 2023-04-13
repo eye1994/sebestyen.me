@@ -1,14 +1,4 @@
-import styled from "styled-components";
 import { ProgressBar } from "../ProgressBar";
-
-const CompetenceContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const CompetenceName = styled.div`
-  font-size: 12px;
-`;
 
 export interface CompetenceProps {
   name: string;
@@ -17,9 +7,9 @@ export interface CompetenceProps {
 
 export const Competence = ({ name, percentage }: CompetenceProps) => {
   return (
-    <CompetenceContainer>
-      <CompetenceName>{name}</CompetenceName>
+    <div className="competence-container">
+      <div className="competence-name">{name}</div>
       <ProgressBar percentage={percentage}></ProgressBar>
-    </CompetenceContainer>
+    </div>
   );
 };

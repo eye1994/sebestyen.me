@@ -16,5 +16,5 @@ export const useOnScroll = (onScrollCallback: (scrollY: number) => void) => {
     return () => {
       document.removeEventListener("scroll", onScroll);
     };
-  }, [onScrollCallback]);
+  }, [onScrollCallback, onScroll]);
 };

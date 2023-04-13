@@ -1,16 +1,10 @@
 import { FC } from "react";
 import { Project, ProjectProps } from "./Project";
 
-import styled from "styled-components";
-
 export interface TechnologyExploredProps {
   name: string;
   projects: ProjectProps[];
 }
-
-const TechnologyNameContainer = styled.div`
-  margin-bottom: 8px;
-`;
 
 export const TechnologyExplored: FC<TechnologyExploredProps> = ({
   name,
@@ -18,7 +12,7 @@ export const TechnologyExplored: FC<TechnologyExploredProps> = ({
 }) => {
   return (
     <>
-      <TechnologyNameContainer>{name}</TechnologyNameContainer>
+      <div className="technology-name-container">{name}</div>
       <div>
         {projects.map(({ description, codebase, demo }, index) => (
           <Project
