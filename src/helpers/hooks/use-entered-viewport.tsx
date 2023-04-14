@@ -35,8 +35,10 @@ export const useEnteredViewPort = (elementRef: RefObject<HTMLElement>) => {
   );
 
   useEffect(() => {
+    scrollY.current = window.scrollY;
     updateTopElementPosition();
-  }, [updateTopElementPosition]);
+    setElementVisibility();
+  }, [updateTopElementPosition, setElementVisibility]);
 
   useEffect(() => {
     window.addEventListener("resize", onResize, { passive: true });

@@ -1,4 +1,4 @@
-import { RefObject, useCallback, useState } from "react";
+import { RefObject, useCallback, useEffect, useState } from "react";
 import { useElementHeight } from "./use-element-height";
 import { useOnScroll } from "./use-on-scroll";
 
@@ -12,6 +12,11 @@ export const useElementLeftViewport = (element: RefObject<HTMLElement>) => {
     },
     [elementHeight]
   );
+
+  useEffect(() => {
+    const scrollY = window.scrollY;
+    setIsOutside(scrollY > elementHeight.current);
+  }, []);
 
   useOnScroll(onScroll);
 

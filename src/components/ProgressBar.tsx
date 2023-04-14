@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { CSSProperties, useRef } from "react";
 import { useEnteredViewPort } from "../helpers/hooks/use-entered-viewport";
 
 export interface ProgressBarProps {
@@ -9,10 +9,10 @@ export const ProgressBar = ({ percentage }: ProgressBarProps) => {
   const progressBarRef = useRef(null);
   const isVisible = useEnteredViewPort(progressBarRef);
 
-  // percentage={percentage}
-  // isVisible={isVisible}
-
-  // @TODO fix for SSR
+  const styles: CSSProperties = {
+    ...(isVisible ? { width: `${percentage}%` } : { width: "0" }),
+    ...(percentage === 100 ? { borderRadius: "8px" } : {}),
+  };
 
   return (
     <div>
@@ -23,10 +23,7 @@ export const ProgressBar = ({ percentage }: ProgressBarProps) => {
           aria-valuenow={percentage}
           aria-valuemin={0}
           aria-valuemax={100}
-          style={{
-            width: isVisible ? `${percentage}%` : "0",
-            borderRadius: percentage === 100 ? "8px" : "0",
-          }}
+          style={styles}
         ></div>
       </div>
     </div>
