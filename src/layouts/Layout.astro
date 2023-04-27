@@ -146,6 +146,23 @@ const { title } = Astro.props;
     text-align: center;
     width: 100%;
     padding: 16px;
+    position: relative;
+  }
+
+  a.download-cv,
+  a.download-cv:visited,
+  a.download-cv:focus {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: var(--secondaryText);
+    padding: 12px 24px;
+    border: 1px solid var(--secondaryText);
+    z-index: 2;
+  }
+
+  a.download-cv svg {
+    margin-right: 4px;
   }
 
   section {
@@ -423,5 +440,18 @@ const { title } = Astro.props;
       width: 2px;
       background-color: var(--lightGray);
     }
+
+    a.download-cv,
+    a.download-cv:focus,
+    a.download-cv:visited {
+      color: var(--primary);
+      border: none;
+      padding: 12px;
+      top: 4px;
+      right: 4px;
+    }
+    /* a.download-cv .label {
+      display: none;
+    } */
   }
 </style>

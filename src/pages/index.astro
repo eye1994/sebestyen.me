@@ -6,11 +6,13 @@ import { Timeline } from "../components/timeline/Timeline";
 import { TechnologiesExplored } from "../components/technologies-explored/TechnologiesExplored";
 import { Hobbies } from "../components/Hobbies";
 import { Contact } from "../components/Contact";
+import { DownloadCV } from "../components/DownloadCV";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Roland SEBESTYEN">
-  <div className="content-wrapper">
+  <div class="content-wrapper">
+    <DownloadCV />
     <Header client:load />
     <About />
     <Timeline />
