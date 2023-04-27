@@ -9,6 +9,7 @@ export const ProgressBar = ({ percentage }: ProgressBarProps) => {
   const progressBarRef = useRef(null);
   const isVisible = useEnteredViewPort(progressBarRef);
 
+
   const styles: CSSProperties = {
     ...(isVisible ? { width: `${percentage}%` } : { width: "0" }),
     ...(percentage === 100 ? { borderRadius: "8px" } : {}),

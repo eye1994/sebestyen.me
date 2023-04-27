@@ -2,7 +2,7 @@ import { FC, useMemo } from "react";
 
 export interface TimelineEventProps {
   title: string;
-  description?: string;
+  description?: string | JSX.Element;
   startPeriod: string;
   endPeriod?: string;
   hashtag?: string;

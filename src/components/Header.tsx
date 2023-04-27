@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useElementLeftViewport } from "../helpers/hooks/use-element-left-viewport";
 import { CodeAnimation } from "../helpers/animation/Code";
 import clsx from "clsx";

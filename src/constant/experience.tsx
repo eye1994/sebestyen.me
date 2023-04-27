@@ -3,8 +3,38 @@ import { TimelineEventProps } from "../components/timeline/TimelineEvent";
 export const experience: TimelineEventProps[] = [
   {
     title: "Unifiedpost",
-    description:
-      "As a Frontend Technical Lead, I am responsible for managing projects that utilize Angular. In addition, I play an active role in the hiring process by conducting interviews, as well as overseeing performance reviews, providing mentorship and having regular sync meetings with my team.",
+    description: (
+      <>
+        <div>
+          As a Frontend Technical Lead, I have the opportunity to work with and
+          be responsible for the following:
+        </div>
+        <ul>
+          <li>
+            Setting up and building a Design System using Storybook and React
+          </li>
+          <li>Setting up a Micro Frontends architecture</li>
+          <li>
+            Offering mentoring and technical directions to the frontend
+            development team
+          </li>
+          <li>
+            Working alongside product owners and business analysts to provide
+            high-level estimations and technical solutions to new
+            functionalities
+          </li>
+          <li>Conducting technical hiring interviews</li>
+          <li>Conducting annual performance reviews</li>
+          <li>Having regular sync meetings with the frontend developers</li>
+        </ul>
+        <div>Soft Skills: Leadership, Mentorship</div>
+        <div>
+          Technical Skills: Angular, React, Storybook, Micro Frontends, RxJS,
+          Redux, ReactHooks, React Form Hooks, React Query, React Table,
+          Typescript
+        </div>
+      </>
+    ),
     startPeriod: "2019",
     hashtag: "#Frontend-Technical-Lead",
   },
